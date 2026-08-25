@@ -1,0 +1,184 @@
+:root {
+  --primary-color: #e63946;
+  --bg-color: #f8f9fa;
+  --panel-bg: #ffffff;
+  --text-dark: #1d3557;
+  --border-color: #dee2e6;
+  --success: #2a9d8f;
+  --warning: #e9c46a;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-dark);
+  padding: 20px;
+}
+
+/* --- Login View --- */
+.login-overlay {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-color: var(--bg-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.login-box {
+  background: var(--panel-bg);
+  padding: 40px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  text-align: center;
+  width: 100%;
+  max-width: 400px;
+}
+
+.login-box h2 {
+  margin-bottom: 10px;
+  color: var(--text-dark);
+}
+
+.login-box p {
+  color: #6c757d;
+  margin-bottom: 25px;
+  font-size: 0.9rem;
+}
+
+.login-box input {
+  margin-bottom: 15px;
+  text-align: center;
+  width: 100%;
+  padding: 10px;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+}
+
+.login-box button {
+  width: 100%;
+  padding: 12px;
+}
+
+.error-text {
+  color: var(--primary-color);
+  margin-top: 15px;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+/* --- Header --- */
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--panel-bg);
+  padding: 15px 25px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  margin-bottom: 20px;
+}
+
+.controls { display: flex; align-items: center; gap: 15px; }
+#status-display { font-weight: 600; font-size: 0.9rem; }
+
+/* --- Layout --- */
+.dashboard {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 20px;
+  align-items: start;
+}
+
+.panel {
+  background-color: var(--panel-bg);
+  padding: 25px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.panel h2 {
+  margin-bottom: 20px;
+  font-size: 1.25rem;
+  border-bottom: 2px solid var(--border-color);
+  padding-bottom: 10px;
+}
+
+/* --- Notifications & Alerts --- */
+.alert-banner {
+  background-color: var(--success);
+  color: white;
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.call-alert {
+  background-color: #fff3cd;
+  border: 1px solid #ffe69c;
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+.call-alert h3 { color: #856404; margin-bottom: 5px; }
+
+/* --- AI Context Monitor --- */
+.context-monitor { margin-top: 30px; }
+.subtitle { font-size: 0.85rem; color: #6c757d; margin-bottom: 10px; }
+.transcript-box {
+  background-color: #f1f3f5;
+  padding: 15px;
+  border-radius: 6px;
+  min-height: 80px;
+  font-style: italic;
+  border-left: 4px solid var(--primary-color);
+}
+
+/* --- Form Elements --- */
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+.form-group label { display: block; font-weight: 600; margin-bottom: 8px; }
+select {
+  width: 100%; padding: 10px; border: 1px solid var(--border-color);
+  border-radius: 4px; font-size: 1rem;
+}
+
+.checkbox-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  gap: 10px; background: #f8f9fa; padding: 15px;
+  border-radius: 6px; border: 1px solid var(--border-color);
+}
+.checkbox-grid label { font-weight: normal; display: flex; align-items: center; gap: 8px; cursor: pointer; }
+
+/* --- Buttons --- */
+button {
+  padding: 10px 20px; border: none; border-radius: 4px;
+  font-weight: 600; font-size: 1rem; cursor: pointer; transition: opacity 0.2s;
+}
+button:hover { opacity: 0.9; }
+button:disabled { opacity: 0.5; cursor: not-allowed; }
+
+.btn-primary { background-color: var(--primary-color); color: white; }
+.btn-secondary { background-color: #6c757d; color: white; }
+.btn-success { background-color: var(--success); color: white; width: 100%; margin-top: 10px; padding: 12px;}
+.btn-danger { background-color: var(--primary-color); color: white; width: 100%; margin-bottom: 20px;}
+
+.form-actions {
+  display: flex; justify-content: flex-end; gap: 10px;
+  margin-top: 30px; border-top: 1px solid var(--border-color); padding-top: 20px;
+}
