@@ -57,7 +57,7 @@ input.on('data', data => {
 
 function setApiKey(data) {
   if (data.toString().trim().length === 0 || data.toString().trim() === ' ') {
-    console.log('(Can not be blank.) Enter you API key:');
+    console.log('(Can not be blank.) Enter your API key:');
   } else {
     process.env.VONAGE_API_KEY = data.toString().trim();
     step = 'SET_API_SECRET';
@@ -68,7 +68,7 @@ function setApiKey(data) {
 
 function setApiSecret(data) {
   if (data.toString().trim().length === 0 || data.toString().trim() === ' ') {
-    console.log('(Can not be blank.) Enter you API secret:');
+    console.log('(Can not be blank.) Enter your API secret:');
   } else {
     process.env.VONAGE_API_SECRET = data.toString().trim();
     step = 'SET_APP_NAME';
