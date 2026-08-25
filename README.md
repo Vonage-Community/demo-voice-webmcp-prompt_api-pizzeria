@@ -26,4 +26,24 @@ The set up script will then:
 - Purchase and attach a Vonage phone number to the application (Make sure to type Y when asked about purchasing a number and enter your country code ie US, UK, etc)
 - Spin up the server to be able to preview the application
 
+> WebMCP is currently in Origin Trial so you will need to [register your application](https://developer.chrome.com/origintrials/#/register_trial/4163014905550602241) and place the key in the `/pages/index.html` file
+
+## How to Use
+
+Enter your name and the phone number you will be calling from into the log in screen. Providing your phone number will allow Vonage to direct your call to your dashboard.
+
+Once in the dashboard, it will list the phone number to call the pizzeria. Call the number. You may need to mute your phone.
+
+The incoming call will show up on the dashboard. Answer and say "Thanks for calling. What would you like to order?" and press the mute button.
+
+> Alternate muting your device and dashboard when speaking to prevent cross talk.
+
+As you place your order on the phone, the dashboard's form should automatically update. Try modifying your choices while ordering, and the form will reflect the choices.
+
+When finished, submit the order and hang up the call.
+
+Call back and ask for your last/usual order. It will automatically populate the form.
+
+## Feedback
+
 Let us know what you think of the application in our Vonage [Developer Community Slack](https://vonage.dev/slack).
