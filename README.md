@@ -11,7 +11,7 @@ Technologies used:
 
 ## Quick deploy
 
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/Vonage-Community/sample-voice-node-learning_server/tree/main)
+[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/Vonage-Community/demo-voice-webmcp-prompt_api-pizzeria/tree/main)
 
 The quickest way to try the demo this application is to use GitHub Codespaces.
 
